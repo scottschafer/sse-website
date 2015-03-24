@@ -1,0 +1,18 @@
+<section data-ng-controller="HomeController">
+	<div class="background"></div>
+	<ssephysics elements="elements" actions="actions" paused="paused" arrived="arrived"></ssephysics>
+
+	<div class="sectionLinks">
+		<div ng-repeat="section in sections">
+			<button type="button" class="btn btn-primary"
+					data-ng-checked="currentSection == section.link"
+					data-ng-click="onClick(section)">{{section.text}}
+			</button>
+		</div>
+	</div>
+
+	<button type="button" class="btn btn-primary" data-ng-show="arrived"
+					style="position:absolute;top:80px; right:50px;width:200px;height:100px"
+					data-ng-click="onBack()">Back</button>
+
+</section>
